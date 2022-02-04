@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT-VERSE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/home-style.css">
+    
+</head>
+
+<body>
+    <div class="top-sec">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top color">
+            <div class="container-fluid">
+             <form action="/chatroom" method="get">
+               <button style="border: none;" type="submit"><img src="/AllPhotos/CHAT-VERSE.png" width="40" height="40"</button>
+             </form>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse ml-4" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item ">
+                 
+                    <form action="/chatroom" method="post">
+                      <input type="text" name="choice" value="et" style="display: none;">
+                      <button class="btn">ENTERTAINMENT</button>
+                    </form>
+                  </li>
+                  <li class="nav-item">
+              
+                    <form action="/chatroom" method="post">
+                      <input type="text" name="choice" value="sports" style="display: none;">
+                      <button class="btn">SPORTS</button>
+                    </form>
+                  </li>
+                  <li class="nav-item">
+                   
+                    <form action="/chatroom" method="post">
+                      <input type="text" name="choice" value="politics" style="display: none;">
+                      <button class="btn">POLITICS</button>
+                    </form>
+                  </li>
+                
+                </ul>
+                <form class="d-flex ml-auto" autocomplete="off" action="/chatroom/room" method="get">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        <div class="main-info">
+            <div class="intro-1">100% Free online chat rooms and private chat rooms</div>
+            <div class="intro-2">Make your chatting fun with images and videos. Aside from text chatting you can express
+                yourself through images and by sharing your favorite videos.</div>
+            <div class="button">
+              <form action="/chatroom/room" method="get" style="display: inline;">
+              <button>ENTER THE CHAT</button>
+              </form>
+              <form action="/contact" method="get" style="display: inline;">
+               <button class="btn-contact">CONTACT US</button>
+              </form>
+            </div>
+        </div>
+    </div>
+    <main>
+    <div class="container1150">
+      <div class="main-one" style="margin-top: 70px;">
+        100% Free online group chat rooms and private chat rooms
+        <br>
+        <p class="describe">
+          You can either create group chat rooms or join the hundreds of group chat rooms created by our users or system rooms. Private chat rooms refers to the private messaging system that allows you to privately chat with a user apart from the group chat room.
+        </p>
+      </div>
+      <div class="main-one">
+        Free chat rooms site
+        <br>
+        <p class="describe">
+          Not all chat sites are free but ours is. No additional charges for on you to use the chat rooms, they are completely free of cost. Our online free chat lets you chat online for free and lets you do video chat with your friends.
+          </p>
+      </div>
+      <div class="main-one">
+        Live Chat
+        <br>
+        <p class="describe">
+          Live chat is a very effective way of sharing information and opinion, especially in our case, the live chat is used for sharing one another's opinion. Live chat helps you cut down a lot of time one would need to meetup with someone on the other hand it appears to be an easier way of expressing your opinion and values as it lets you stay behind the screen and protects you from unnecessary argument.
+          </p>
+      </div>
+      <div class="main-one">
+        Free local chat
+        <br>
+        <p class="describe">
+          We help you connect to people from all over the globe which includes your local region as well. As already mentioned our service is free and that makes us your free local chat alternative.
+          </p>
+      </div>
+      <div class="main-one">
+        Free online chat room
+        <br>
+        <p class="describe" style="margin-bottom: 70px;">
+          As already mentioned we provide you with free online chat  which makes us your free chat apps alternative. Said so we would like to confirm that you aren't required to make any first hand payments, you can chat as guest to take a trial even before registering which is also absolutely free of charges.
+          </p>
+      </div>
+    </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+        <div class="footer-div">SAD99.COM</div>
+        <div class="footer-div">
+            <a href="" class="img"><img src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"/></a>
+            <a href="" class="img"><img src="https://img.icons8.com/ios/50/000000/twitter--v1.png"/></a>
+           <a href="" class="img"> <img src="https://img.icons8.com/ios/50/000000/linkedin.png"/></a>
+        </div>
+        <div class="footer-div">PRIVACY POLICY</div>
+
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2022 All rights reserved. SAD99.in
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

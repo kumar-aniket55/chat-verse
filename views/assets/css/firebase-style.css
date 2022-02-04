@@ -1,0 +1,236 @@
+#chatContainer{
+    height: 80vh;
+    width: 55%;
+    margin: auto auto;
+    margin-top: 5vh ;
+   
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px; 
+}
+                                                    
+#topBar{
+    background: #3c3163;
+    color: white;  
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#topBar h2{
+    margin-left: 2%;
+    text-align: center;
+}
+
+#chatBox{
+    background: rgb(236,229,237);
+    background: linear-gradient(90deg, rgba(236,229,237,1) 0%, rgba(237,238,224,0.7917542016806722) 49%, rgba(207,209,236,1) 100%);
+    height: 100%;
+    width: 100%;
+    overflow-y:scroll;
+    
+    display: flex;
+    flex-direction: column;
+}
+#bottomInput{
+    margin-bottom: 0 !important;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+body{
+    background-image: url("https://images.unsplash.com/photo-1591788729390-7212ecda0325?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80");
+
+}
+
+.incomingChat{
+   margin-left: 1%;
+   max-width: 50%;
+
+  
+}
+.incomingChat p{
+    background: rgb(246, 202, 249);
+    border-radius: 10px;
+    width: max-content;
+    font-size: 20px;
+    max-width: 100%;
+    padding: 1%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+ }
+
+.outgoingChat {
+    align-self: flex-end;
+    margin-right: 2%;
+    max-width: 60%;
+  
+    
+}
+
+.outgoingChat p{
+  
+    font-size: 20px;
+    background: rgb(108, 226, 242);
+    margin: 3%;
+    padding-left: 10px;
+    padding-right: 8px;
+    width: max-content;
+    max-width: 100%;
+    border-radius: 10px;
+    
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+.incomingName{
+    font-weight: 1000;
+}
+.modal {
+visibility: hidden;
+transition: all 1.3s;
+opacity: 0;
+}
+.modal.open {
+visibility: visible;
+opacity: 1;
+}
+.modal,
+.modal-overlay {
+position: fixed;
+left: 0;
+top: 0;
+height: 100vh;
+width: 100vw;
+z-index: 100;
+}
+
+.modal,
+.modal-card,
+.modal-body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.modal-content {
+overflow: auto;
+flex-grow: 1;
+}
+
+.modal-overlay {
+background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-body {
+z-index: 101;
+margin: auto;
+/* max-height: calc(100vh - 1rem); */
+max-width: calc(100vw - 1rem);
+border-radius: 10px;
+overflow: hidden;
+width: 500px;
+background: white;
+}
+
+.modal-header,
+.modal-content,
+.modal-footer {
+padding: 1rem;
+}
+
+.modal-header {
+background: rebeccapurple;
+text-transform: capitalize;
+font-size: 1.25rem;
+color: white;
+font-weight: bold;
+margin-top: 2%;
+}
+
+.modal-footer {
+display: flex;
+justify-content: space-between;
+}
+emoji-picker {
+    width: 100%;
+     align-self: center;
+     display: none;
+    height: 45%;
+  }
+  .xyz {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      margin-top: 10px ;
+      
+  }
+  .login h4{
+      
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .login{
+      border-radius: 10px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .form-control
+  {
+    border-bottom-right-radius: 10px;
+     border-bottom-left-radius: 10px;
+  }
+  /* .btn{
+      margin-left: 5px !important;
+      border-radius: 10px !important;
+     
+  } */
+.sed{
+    border-bottom-right-radius: 10px !important;
+    /* border-bottom-left-radius: 10px !important; */
+    border-top-left-radius:0 !important ;
+    border-top-right-radius:0 !important ;
+}
+.text1:hover::after {
+    content: "SEND";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 70px;
+    padding: 5px;
+    opacity: 0.7;
+  }
+  .text2:hover::after {
+    content: "EMOJI";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 70px;
+    padding: 5px;
+    opacity: 0.7;
+  }
+  
+  
+ 
