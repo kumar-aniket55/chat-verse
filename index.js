@@ -13,7 +13,9 @@ app.use(express.static("views"));
 app.engine('ejs', ejsMate)
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
-
+app.get('/',Catch((req,res,next)=>{
+    res.render('home');
+}))
 app.get('/chatroom',Catch((req,res,next)=>{
     res.render('home');
 }))
