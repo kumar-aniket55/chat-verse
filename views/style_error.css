@@ -16,3 +16,39 @@ body { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAA
 body{
     margin: 0;
 }
+.button-two{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.error{
+    background-color: #ffb3c1 !important;
+    width: 80%;
+    margin: auto;
+}
+ .error p{
+ font-size: 1.9rem;
+}
+.button-two a{
+   margin: 16px;
+}
+@media screen and (max-width: 780px){
+    .increase{
+        width: 100% !important;
+    }
+    .button-two{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .error p{
+        font-size: 1.1rem;
+       }
+       .error{
+           width: 100%;
+       }
+
+    
+}
