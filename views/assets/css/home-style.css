@@ -68,13 +68,13 @@ body{
 }
 
 
-.button form:nth-of-type(1) button:nth-of-type(1)
+.button a:nth-of-type(1) button:nth-of-type(1)
 {
     background-color: #ec407a;
     border-color: #ec407a;
     transition: 0.5s ease;
 }
-.button  form:nth-of-type(1) button:nth-of-type(1):hover
+.button  a:nth-of-type(1) button:nth-of-type(1):hover
 {
     background-color:#c92a5f;
     
@@ -154,4 +154,37 @@ footer{
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
+  }
+  @media screen and (max-width: 780px){
+      .intro-1{
+          font-size: 2rem;
+          width: 80%;
+      }
+      .intro-2{
+          font-size: 1.2rem;
+          width: 80%;
+          line-height: 1.4;
+          margin-top: 15px;
+      }
+      .button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer-div {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+      }
+      .container-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+      }
+      
+     
   }

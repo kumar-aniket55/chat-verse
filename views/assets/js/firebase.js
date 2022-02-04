@@ -96,6 +96,8 @@ document.querySelector("#enterButton").addEventListener('click',()=>{
 })
 
 
+
+let currName = "";
 //Read Message asynchonous method
 //READING for the first time and when the childs(messages) are added
 function addChilds(){
@@ -112,28 +114,78 @@ function addChilds(){
          
         if(data.val().username==username){
         //outgoing message
-        const chatBubble = Object.assign(
-            document.createElement(`div`), 
-            { 
-                innerHTML: `       
-                <div class="incomingName" style="text-align:right">You</div>
-    <p>${data.val().message}</p>
-                      `,
-              classList: [`outgoingChat`], } );
+        if(currName==username){
+            //continuos message
+            const chatBubble = Object.assign(
+                document.createElement(`div`), 
+                { 
+                    innerHTML: `       
+                    <div class="incomingName" style="text-align:right"></div>
+        <p>${data.val().message}
+        
+      
+        </p>
+                          `,
+                  classList: [`outgoingChat`], } );
+    
+                  document.querySelector('#chatBox').appendChild(chatBubble);
+        }else{
+            //discontinuos message
+            const chatBubble = Object.assign(
+                document.createElement(`div`), 
+                { 
+                    innerHTML: `       
+                    <div class="incomingName" style="text-align:right">You</div>
+        <p>${data.val().message}
+        
+        </p>
+                          `,
+                  classList: [`outgoingChat`], } );
+    
+                  document.querySelector('#chatBox').appendChild(chatBubble);
+        }
 
-              document.querySelector('#chatBox').appendChild(chatBubble);
+       
+
+
+
+              currName = data.val().username;
     }else{
         //incoming message
-        const chatBubble = Object.assign(
-            document.createElement(`div`), 
-            { 
-                innerHTML: `       
-                <div class="incomingName">${data.val().username}</div>
-    <p>${data.val().message}</p>
-                      `,
-              classList: [`incomingChat`], } );
+         
+        if(data.val().username==currName){
+            //continuous message it is
+            const chatBubble = Object.assign(
+                document.createElement(`div`), 
+                { 
+                    innerHTML: `       
+                    <div class="incomingName"></div>
+        <p>${data.val().message}
+        
+        
+        </p>
+                          `,
+                  classList: [`incomingChat`], } );
+                  document.querySelector('#chatBox').appendChild(chatBubble);
+        }else{
+            //dicontinous it is
+            const chatBubble = Object.assign(
+                document.createElement(`div`), 
+                { 
+                    innerHTML: `       
+                    <div class="incomingName">${data.val().username}</div>
+        <p>
+        ${data.val().message} 
+                   
+        
+        </p>
+                          `,
+                  classList: [`incomingChat`], } );
+                  document.querySelector('#chatBox').appendChild(chatBubble);
+        }
+        currName = data.val().username;
 
-              document.querySelector('#chatBox').appendChild(chatBubble);
+              
     }
     document.querySelector('#chatBox').scrollTop = document.querySelector('#chatBox').scrollHeight
 

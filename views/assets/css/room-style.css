@@ -279,3 +279,10 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+@media screen and (max-width: 780px)
+{
+ .main a{
+   font-size: 0.9rem;
+  
+ } 
+}
