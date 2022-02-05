@@ -31,8 +31,12 @@ app.get('/chatroom/room/chat/:id',Catch((req,res,next)=>{
     res.render('firebase',{id});
     
 }));
-app.get("/contact",(req,res)=>{
-    res.send("CONTACT PAGE")
+app.get('/chatroom/contact',Catch((req,res,next)=>{
+    res.render("contact")
+    
+}));
+app.post('/chatroom/contact',(req,res)=>{
+    res.send("thanks for reviewing us")
 })
 app.post("/chatroom",(req,res)=>{
     const {choice}=req.body;
@@ -53,5 +57,5 @@ app.use((err, req, res, next) => {
 })
 
 app.listen(process.env.PORT || 3000,()=>{
-    console.log('Listening to port 8080');
+    console.log('Listening to port 3000');
 })
