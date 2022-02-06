@@ -81,9 +81,13 @@ input.addEventListener("keyup", function(event) {
 });
 
 
+
 //Send the message
 document.querySelector("#enterButton").addEventListener('click',()=>{
 
+    if(input.value!=""){
+        
+    
     const text = input.value;
     
     const debref = ref(db,Path);
@@ -93,8 +97,9 @@ document.querySelector("#enterButton").addEventListener('click',()=>{
         message: text
     });
     input.value="";
-})
 
+}
+})
 
 
 let currName = "";
@@ -108,6 +113,8 @@ function addChilds(){
     // list.innerHTML=data.val().name + ": " + data.val().message;
     // document.querySelector('ul').appendChild(list);
 
+    
+   
     if(username==""){
        
      }else{ 
@@ -121,7 +128,7 @@ function addChilds(){
                 { 
                     innerHTML: `       
                     <div class="incomingName" style="text-align:right"></div>
-        <p>${data.val().message}
+        <p>${urlify(data.val().message)}
         
       
         </p>
@@ -136,7 +143,7 @@ function addChilds(){
                 { 
                     innerHTML: `       
                     <div class="incomingName" style="text-align:right">You</div>
-        <p>${data.val().message}
+        <p>${urlify(data.val().message)}
         
         </p>
                           `,
@@ -160,7 +167,7 @@ function addChilds(){
                 { 
                     innerHTML: `       
                     <div class="incomingName"></div>
-        <p>${data.val().message}
+        <p>${urlify(data.val().message)}
         
         
         </p>
@@ -175,7 +182,7 @@ function addChilds(){
                     innerHTML: `       
                     <div class="incomingName">${data.val().username}</div>
         <p>
-        ${data.val().message} 
+        ${urlify(data.val().message)} 
                    
         
         </p>
@@ -209,12 +216,14 @@ function addChilds(){
 document.querySelector('#moduleButton').addEventListener('click',()=>{
 
 
+    document.querySelector('#moduleButton').disabled=true;
 username =  document.querySelector("#usernameInput").value.toLowerCase().trim();
 const pass = document.querySelector("#passwordInput").value.trim();
 // pass = pass.trim();
 // username=username.trim();
 if(username==""){
     alert("username cannot be empty");
+    document.querySelector('#moduleButton').disabled=false;
     return;
 }
 //reading user if exist
@@ -275,6 +284,7 @@ Wrong Password!
     }
  
 
+    document.querySelector('#moduleButton').disabled=false;
 } else {
     
     //Writing new username and logging in...
@@ -318,3 +328,15 @@ console.error(error);
 });
 
 });
+
+
+//ulify Text
+
+function urlify(text) {
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function(url) {
+      return '<a href="' + url + '">' + url + '</a>';
+    })
+    // or alternatively
+    // return text.replace(urlRegex, '<a href="$1">$1</a>')
+  }
